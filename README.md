@@ -1,6 +1,6 @@
 # 迎战铁魔法联动（铁魔法扩展）
 
-本模组把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。**0.2.17** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[下载 0.2.17](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.17/fortune_spells-0.2.17.jar) · [发布说明](docs/发布说明.md)
+本模组把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。**0.2.17** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[下载 0.2.17](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.17/fortune_spells-0.2.17.jar) · [发布说明](docs/发布说明.md) · [玩家入门](docs/curseforge/quickstart.md) · [中英项目介绍](docs/curseforge/project.md)
 
 超位墨水采用「星轨天球」瓶形。一道星轨斜穿球形玻璃瓶，瓶身中央点亮一颗四芒星。整瓶的流彩动画共 40 帧，约两秒循环一次。物品栏格子外缘有一圈 1 像素的金边，四角呈浅金色。[查看墨水动图](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/rainbow-ink.gif)
 
