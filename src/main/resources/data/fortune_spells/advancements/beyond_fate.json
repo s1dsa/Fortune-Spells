@@ -1,0 +1,39 @@
+{
+  "parent": "fortune_spells:legend",
+  "display": {
+    "icon": {
+      "item": "irons_spellbooks:scroll",
+      "nbt": "{\"irons_spellbooks:spell_container\":{maxSpells:1,spellWheel:0b,mustEquip:0b,data:[{id:\"fortune_spells:audience\",index:0,level:1,locked:1b}]}}"
+    },
+    "title": {
+      "translate": "advancement.fortune_spells.beyond_fate.title"
+    },
+    "description": {
+      "translate": "advancement.fortune_spells.beyond_fate.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "scroll": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "irons_spellbooks:scroll"
+            ],
+            "nbt": "{\"irons_spellbooks:spell_container\":{data:[{id:\"fortune_spells:audience\"}]}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "scroll"
+    ]
+  ]
+}

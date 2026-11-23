@@ -1,0 +1,69 @@
+{
+  "parent": "fortune_spells:glimpse",
+  "display": {
+    "icon": {
+      "item": "irons_spellbooks:scroll",
+      "nbt": "{\"irons_spellbooks:spell_container\":{maxSpells:1,spellWheel:0b,mustEquip:0b,data:[{id:\"fortune_spells:croc_devour\",index:0,level:1,locked:1b}]}}"
+    },
+    "title": {
+      "translate": "advancement.fortune_spells.legend.title"
+    },
+    "description": {
+      "translate": "advancement.fortune_spells.legend.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "croc_devour": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{\"irons_spellbooks:spell_container\":{data:[{id:\"fortune_spells:croc_devour\"}]}}"
+          }
+        ]
+      }
+    },
+    "phantom_belfry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{\"irons_spellbooks:spell_container\":{data:[{id:\"fortune_spells:phantom_belfry\"}]}}"
+          }
+        ]
+      }
+    },
+    "sunset_blade_dance": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{\"irons_spellbooks:spell_container\":{data:[{id:\"fortune_spells:sunset_blade_dance\"}]}}"
+          }
+        ]
+      }
+    },
+    "bone_wings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{\"irons_spellbooks:spell_container\":{data:[{id:\"fortune_spells:bone_wings\"}]}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "croc_devour",
+      "phantom_belfry",
+      "sunset_blade_dance",
+      "bone_wings"
+    ]
+  ]
+}

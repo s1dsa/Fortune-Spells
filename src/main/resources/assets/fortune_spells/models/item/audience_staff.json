@@ -1,0 +1,17 @@
+{
+  "loader": "forge:obj",
+  "model": "fortune_spells:models/item/audience_staff.obj",
+  "automatic_culling": false,
+  "shade_quads": true,
+  "emissive_ambient": true,
+  "textures": { "particle": "minecraft:block/gold_block" },
+  "display": {
+    "gui": { "rotation": [10, 19, -32], "translation": [0, 0, 0], "scale": [0.82, 0.82, 0.82] },
+    "ground": { "rotation": [0, 0, -23], "translation": [0, 3.7, 0], "scale": [0.63, 0.63, 0.63] },
+    "fixed": { "rotation": [0, 15, -20], "translation": [0, 0, 0], "scale": [0.68, 0.68, 0.68] },
+    "thirdperson_righthand": { "rotation": [-12, 12, -8], "translation": [0, 3.2, 1], "scale": [1.38, 1.38, 1.38] },
+    "thirdperson_lefthand": { "rotation": [-12, -12, 8], "translation": [0, 3.2, 1], "scale": [1.38, 1.38, 1.38] },
+    "firstperson_righthand": { "rotation": [-7, 12, -16], "translation": [1.1, 0.5, -1.5], "scale": [0.94, 0.94, 0.94] },
+    "firstperson_lefthand": { "rotation": [-7, -12, 16], "translation": [1.1, 0.5, -1.5], "scale": [0.94, 0.94, 0.94] }
+  }
+}

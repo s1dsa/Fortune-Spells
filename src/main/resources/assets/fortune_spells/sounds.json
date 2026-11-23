@@ -1,0 +1,13 @@
+{
+  "spell.fortune.cast":   { "subtitle": "subtitles.fortune_spells.spell.fortune.cast",   "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.snap", "type": "event" } ] },
+  "spell.fortune.charge": { "subtitle": "subtitles.fortune_spells.spell.fortune.charge", "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.chips.start", "type": "event" } ] },
+  "card.appear":          { "subtitle": "subtitles.fortune_spells.card.appear",          "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.card.start", "type": "event" } ] },
+  "card.shuffle":         { "subtitle": "subtitles.fortune_spells.card.shuffle",         "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.spin.start", "type": "event" } ] },
+  "card.flip":            { "subtitle": "subtitles.fortune_spells.card.flip",            "sounds": [ { "name": "minecraft:item.book.page_turn", "type": "event" } ] },
+  "card.right":           { "subtitle": "subtitles.fortune_spells.card.right",           "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.card.right", "type": "event" } ] },
+  "card.wrong":           { "subtitle": "subtitles.fortune_spells.card.wrong",           "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.card.wrong", "type": "event" } ] },
+  "fate.laugh":           { "subtitle": "subtitles.fortune_spells.fate.laugh",           "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.attack", "type": "event" } ] },
+  "fate.strike":          { "subtitle": "subtitles.fortune_spells.fate.strike",          "sounds": [ { "name": "meetyourfight:item.proc.slicers_dice", "type": "event", "pitch": 1.2 } ] },
+  "all_in.cast":          { "subtitle": "subtitles.fortune_spells.all_in.cast",          "sounds": [ { "name": "meetyourfight:entity.dame_fortuna.chips.fire", "type": "event" } ] },
+  "all_in.proc":          { "subtitle": "subtitles.fortune_spells.all_in.proc",          "sounds": [ { "name": "meetyourfight:item.proc.slicers_dice", "type": "event", "pitch": 0.8 } ] }
+}

@@ -1,0 +1,12 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "fortune_spells:font/creator_sigil.png",
+      "height": 9,
+      "ascent": 8,
+      "chars": ["·"]
+    },
+    { "type": "reference", "id": "minecraft:default" }
+  ]
+}

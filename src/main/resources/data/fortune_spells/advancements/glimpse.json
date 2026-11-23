@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "fortune_spells:transcendent_ink"
+    },
+    "title": {
+      "translate": "advancement.fortune_spells.glimpse.title"
+    },
+    "description": {
+      "translate": "advancement.fortune_spells.glimpse.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/end.png"
+  },
+  "criteria": {
+    "ink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fortune_spells:transcendent_ink"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ink"
+    ]
+  ]
+}

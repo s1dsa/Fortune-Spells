@@ -1,0 +1,59 @@
+newmtl ebony
+Kd 0.14118 0.10196 0.19608
+Ka 0.00 0.00 0.00
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl wine
+Kd 0.42353 0.15294 0.29412
+Ka 0.00 0.00 0.00
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl gilt
+Kd 0.85098 0.56471 0.27059
+Ka 0.00 0.00 0.00
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl electrum
+Kd 1.00000 0.85882 0.54510
+Ka 0.00 0.00 0.00
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl bronze
+Kd 0.61961 0.31765 0.21961
+Ka 0.00 0.00 0.00
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl ruby
+Kd 0.93333 0.32941 0.52941
+Ka 0.32 0.32 0.32
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl garnet
+Kd 0.57647 0.17255 0.46667
+Ka 0.15 0.15 0.15
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl opal
+Kd 1.00000 0.73725 0.78039
+Ka 0.38 0.38 0.38
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl aqua
+Kd 0.45098 0.91765 0.86667
+Ka 0.32 0.32 0.32
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete
+
+newmtl ice
+Kd 0.86275 1.00000 1.00000
+Ka 0.44 0.44 0.44
+forge_TintIndex -1
+map_Kd minecraft:block/white_concrete

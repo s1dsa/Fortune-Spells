@@ -1,0 +1,25 @@
+{
+  "type": "irons_spellbooks:alchemist_cauldron_brew",
+  "base_fluid": {
+    "Amount": 1000,
+    "FluidName": "fortune_spells:transcendent_ink"
+  },
+  "input": {
+    "tag": "fortune_spells:boss_ink_catalysts"
+  },
+  "results": [],
+  "byproduct": {
+    "item": "irons_spellbooks:scroll",
+    "count": 1,
+    "nbt": {
+      "irons_spellbooks:spell_container": {
+        "maxSpells": 1,
+        "spellWheel": false,
+        "mustEquip": false,
+        "data": [
+          { "id": "fortune_spells:audience", "index": 0, "level": 1, "locked": true }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "parent": "fortune_spells:beyond_fate",
+  "display": {
+    "icon": {
+      "item": "fortune_spells:audience_staff"
+    },
+    "title": {
+      "translate": "advancement.fortune_spells.creator.title"
+    },
+    "description": {
+      "text": "",
+      "extra": [
+        {
+          "translate": "advancement.fortune_spells.creator.part1",
+          "color": "#ffcb6b"
+        },
+        {
+          "translate": "advancement.fortune_spells.creator.part2",
+          "color": "#ff879e"
+        },
+        {
+          "translate": "advancement.fortune_spells.creator.part3",
+          "color": "#c4a1ff"
+        },
+        {
+          "translate": "advancement.fortune_spells.creator.part4",
+          "color": "#7ae3e8"
+        }
+      ]
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "staff": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fortune_spells:audience_staff"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "staff"
+    ]
+  ]
+}

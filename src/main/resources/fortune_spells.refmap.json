@@ -1,0 +1,18 @@
+{
+  "mappings": {
+    "io/myf/fortune/mixin/TotemAccess": {
+      "checkTotemDeathProtection": "m_21262_(Lnet/minecraft/world/damagesource/DamageSource;)Z"
+    },
+    "io/myf/fortune/mixin/LivingEntityMixin": {
+      "hurt": "Lnet/minecraft/world/entity/LivingEntity;m_6469_(Lnet/minecraft/world/damagesource/DamageSource;F)Z",
+      "actuallyHurt": "m_6475_(Lnet/minecraft/world/damagesource/DamageSource;F)V",
+      "Lnet/minecraft/world/entity/LivingEntity;actuallyHurt(Lnet/minecraft/world/damagesource/DamageSource;F)V": "Lnet/minecraft/world/entity/LivingEntity;m_6475_(Lnet/minecraft/world/damagesource/DamageSource;F)V"
+    },
+    "io/myf/fortune/mixin/PlayerMixin": {
+      "hurt": "Lnet/minecraft/world/entity/player/Player;m_6469_(Lnet/minecraft/world/damagesource/DamageSource;F)Z"
+    },
+    "io/myf/fortune/mixin/IronHeartstopMixin": {
+      "Lnet/minecraft/world/entity/LivingEntity;hasEffect(Lnet/minecraft/world/effect/MobEffect;)Z": "Lnet/minecraft/world/entity/LivingEntity;m_21023_(Lnet/minecraft/world/effect/MobEffect;)Z"
+    }
+  }
+}
