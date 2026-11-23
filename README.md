@@ -1,6 +1,6 @@
-# 命运法术 Fortune Spells
+# 迎战铁魔法联动（铁魔法扩展）
 
-命运法术把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。**0.2.16** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[下载 0.2.16](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/fortune_spells-0.2.16.jar) · [发布说明](docs/发布说明.md)
+本模组把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。**0.2.17** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[下载 0.2.17](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.17/fortune_spells-0.2.17.jar) · [发布说明](docs/发布说明.md)
 
 超位墨水采用「星轨天球」瓶形。一道星轨斜穿球形玻璃瓶，瓶身中央点亮一颗四芒星。整瓶的流彩动画共 40 帧，约两秒循环一次。物品栏格子外缘有一圈 1 像素的金边，四角呈浅金色。[查看墨水动图](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/rainbow-ink.gif)
 
@@ -65,7 +65,7 @@ gradlew.bat build
 
 PowerShell 里要写成 `.\gradlew.bat build`。
 
-- 构建 0.2.16 的产物在 `build\libs\fortune_spells-0.2.16.jar`。
+- 构建 0.2.17 的产物在 `build\libs\fortune_spells-0.2.17.jar`。
 - 首次构建会下载依赖、反编译 Minecraft，需要几分钟，之后会快很多。
 - 依赖下载失败（尤其是 Modrinth 上的迎战）时，请在频道 #111 里报，后端会换成 cursemaven 坐标（DESIGN 第 12 节第 5 条）。
 
@@ -96,7 +96,7 @@ gradlew.bat runServer
 
 | jar | 版本 |
 |---|---|
-| 本模组 [fortune_spells-0.2.16.jar](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/fortune_spells-0.2.16.jar) | 0.2.16，升级时替换旧版 JAR |
+| 本模组 [fortune_spells-0.2.17.jar](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.17/fortune_spells-0.2.17.jar) | 0.2.17，升级时替换旧版 JAR |
 | Iron's Spells 'n Spellbooks | 1.20.1-3.16.4 |
 | Iron's Lib | 1.20.1-2.1.0 |
 | Meet Your Fight | 1.20.1-1.6.2 |
