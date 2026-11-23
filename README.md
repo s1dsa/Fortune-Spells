@@ -1,8 +1,8 @@
 # 命运法术 Fortune Spells
 
-命运法术把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。**0.2.16** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[下载 0.2.16](发布/fortune_spells-0.2.16.jar) · [发布说明](docs/发布说明.md)
+命运法术把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。**0.2.16** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[下载 0.2.16](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/fortune_spells-0.2.16.jar) · [发布说明](docs/发布说明.md)
 
-超位墨水采用「星轨天球」瓶形。一道星轨斜穿球形玻璃瓶，瓶身中央点亮一颗四芒星。整瓶的流彩动画共 40 帧，约两秒循环一次。物品栏格子外缘有一圈 1 像素的金边，四角呈浅金色。[查看墨水动图](build/reports/ink-orbit-016/rainbow-ink.gif)
+超位墨水采用「星轨天球」瓶形。一道星轨斜穿球形玻璃瓶，瓶身中央点亮一颗四芒星。整瓶的流彩动画共 40 帧，约两秒循环一次。物品栏格子外缘有一圈 1 像素的金边，四角呈浅金色。[查看墨水动图](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/rainbow-ink.gif)
 
 | 学派 | 法术 |
 |---|---|
@@ -96,7 +96,7 @@ gradlew.bat runServer
 
 | jar | 版本 |
 |---|---|
-| 本模组 [fortune_spells-0.2.16.jar](发布/fortune_spells-0.2.16.jar) | 0.2.16，升级时替换旧版 JAR |
+| 本模组 [fortune_spells-0.2.16.jar](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/fortune_spells-0.2.16.jar) | 0.2.16，升级时替换旧版 JAR |
 | Iron's Spells 'n Spellbooks | 1.20.1-3.16.4 |
 | Iron's Lib | 1.20.1-2.1.0 |
 | Meet Your Fight | 1.20.1-1.6.2 |
