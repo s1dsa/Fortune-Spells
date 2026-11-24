@@ -4,6 +4,8 @@
       "checkTotemDeathProtection": "m_21262_(Lnet/minecraft/world/damagesource/DamageSource;)Z"
     },
     "io/myf/fortune/mixin/LivingEntityMixin": {
+      "forceAddEffect": "Lnet/minecraft/world/entity/LivingEntity;m_147215_(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)V",
+      "Lnet/minecraft/world/entity/LivingEntity;canBeAffected(Lnet/minecraft/world/effect/MobEffectInstance;)Z": "Lnet/minecraft/world/entity/LivingEntity;m_7301_(Lnet/minecraft/world/effect/MobEffectInstance;)Z",
       "hurt": "Lnet/minecraft/world/entity/LivingEntity;m_6469_(Lnet/minecraft/world/damagesource/DamageSource;F)Z",
       "actuallyHurt": "m_6475_(Lnet/minecraft/world/damagesource/DamageSource;F)V",
       "Lnet/minecraft/world/entity/LivingEntity;actuallyHurt(Lnet/minecraft/world/damagesource/DamageSource;F)V": "Lnet/minecraft/world/entity/LivingEntity;m_6475_(Lnet/minecraft/world/damagesource/DamageSource;F)V"

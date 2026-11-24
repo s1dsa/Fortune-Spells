@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="fortune_spells"
-version="0.2.17"
+version="0.2.21-rc1"
 displayName="迎战铁魔法联动（铁魔法扩展）"
 authors="崇宫澪酱"
 description='''为铁魔法与迎战加入命运学派、Boss 法术与超位墨水。'''

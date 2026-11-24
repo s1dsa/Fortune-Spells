@@ -3118,3 +3118,17 @@ f 1479 1478 1477
 f 1480 1479 1477
 f 1481 1480 1477
 f 1482 1481 1477
+
+# Static altar at the crown socket. Both sides use the same world-space UV mapping.
+g audience_altar_ring
+v -0.1 0.645 -0.1
+v -0.1 0.645 1.1
+v 1.1 0.645 1.1
+v 1.1 0.645 -0.1
+vt 0 0
+vt 0 1
+vt 1 1
+vt 1 0
+usemtl altar_inscription
+f 1483/1 1484/2 1485/3 1486/4
+f 1486/4 1485/3 1484/2 1483/1

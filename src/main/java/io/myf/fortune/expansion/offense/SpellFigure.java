@@ -72,6 +72,7 @@ public final class SpellFigure extends Entity implements IEntityAdditionalSpawnD
     private int clientPhaseStart;
     private RunePhase clientPhase = RunePhase.DRAWING;
     private boolean fed;
+    private LivingEntity confirmedDamageTarget;
     private Map<LivingEntity, Float> deferredBites;
     private Set<UUID> victims;
     private List<SpellFigure> petals;
@@ -475,13 +476,16 @@ public final class SpellFigure extends Entity implements IEntityAdditionalSpawnD
         }
         direction = caster.getLookAngle();
         for (LivingEntity enemy : areaTargets(caster,position(),SLASH_RANGE,SLASH_MIN_DOT)) {
+            confirmedDamageTarget = null;
             float health = enemy.getHealth();
             float absorption = enemy.getAbsorptionAmount();
             if (hit(caster, enemy, "sunset_blade_dance", 6 * power, true) && enemy.isAlive()
-                    && (enemy.getHealth() < health || enemy.getAbsorptionAmount() < absorption)) {
+                    && (empowered() || confirmedDamageTarget == enemy
+                    || enemy.getHealth() < health || enemy.getAbsorptionAmount() < absorption)) {
                 ExposedEffect.applySlash(enemy, caster);
             }
         }
+        confirmedDamageTarget = null;
         Vec3 forward = Vec3.directionFromRotation(0,caster.getYRot());
         for (int i=0;i<4;i++) {
             int side=i%2==0 ? -1 : 1;
@@ -535,6 +539,10 @@ public final class SpellFigure extends Entity implements IEntityAdditionalSpawnD
                 targets.add(target);
         }
         return new ArrayList<>(targets);
+    }
+
+    public void confirmDamage(LivingEntity target) {
+        if (kind() == Kind.DANCE) confirmedDamageTarget = target;
     }
 
     private boolean hit(LivingEntity caster, LivingEntity target, String id, float damage, boolean rapid) {

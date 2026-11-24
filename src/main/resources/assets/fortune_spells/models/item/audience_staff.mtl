@@ -57,3 +57,9 @@ Kd 0.86275 1.00000 1.00000
 Ka 0.44 0.44 0.44
 forge_TintIndex -1
 map_Kd minecraft:block/white_concrete
+
+newmtl altar_inscription
+Kd 1 1 1
+Ka 1 1 1
+forge_TintIndex -1
+map_Kd fortune_spells:item/audience_staff_ring

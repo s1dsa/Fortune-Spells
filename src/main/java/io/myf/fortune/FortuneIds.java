@@ -159,6 +159,7 @@ public final class FortuneIds {
         public static final byte WINGS_UNFOLD = 5;
         public static final byte WINGS_SHATTER = 6;
         public static final byte SUNSET_SWING = 7;
+        public static final byte STAFF_ORBIT = 8;
     }
 
     // ---- 语言键前缀 ----

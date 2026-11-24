@@ -3,6 +3,7 @@ package io.myf.fortune.combat;
 import io.myf.fortune.expansion.offense.ExposedEffect;
 import io.myf.fortune.mixin.TotemAccess;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -20,9 +21,11 @@ public final class StaffSpellDamage {
             target.setLastHurtByMob(caster);
             if (caster instanceof Player player) target.setLastHurtByPlayer(player);
             caster.setLastHurtMob(target);
+            if (caster instanceof ServerPlayer player) TargetDummyTracking.trackHit(target, player);
         }
         target.getCombatTracker().recordDamage(source, damage);
-        setHealth(target, Math.max(0, target.getHealth() - damage));
+        // Vanilla clamps inside setHealth. Damage meters need the untruncated delta to see overkill.
+        setHealth(target, target.getHealth() - damage);
         target.hurtTime = target.hurtDuration = 10;
         level.broadcastDamageEvent(target, source);
         target.gameEvent(GameEvent.ENTITY_DAMAGE);
@@ -32,7 +35,7 @@ public final class StaffSpellDamage {
     }
 
     static void setHealth(LivingEntity target, float health) {
-        if (target instanceof FortuneCombatHandler.BossInput boss) boss.fortuneSpells$setExactHealth(health);
+        if (target instanceof FortuneCombatHandler.BossInput boss) boss.fortuneSpells$setExactHealth(Math.max(0, health));
         else target.setHealth(health);
     }
 }

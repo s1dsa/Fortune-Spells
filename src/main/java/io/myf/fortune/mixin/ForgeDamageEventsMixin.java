@@ -1,6 +1,7 @@
 package io.myf.fortune.mixin;
 
 import io.myf.fortune.combat.FortuneCombatHandler;
+import io.myf.fortune.expansion.offense.SpellFigure;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.common.ForgeHooks;
@@ -26,5 +27,9 @@ abstract class ForgeDamageEventsMixin {
     private static void fortuneSpells$afterDamage(LivingEntity target, DamageSource source, float amount,
                                                  CallbackInfoReturnable<Float> callback, LivingDamageEvent event) {
         FortuneCombatHandler.afterDamage(event);
+        // A training dummy can accept damage while keeping its health bar full.
+        if (event.getAmount() > 0 && source.getDirectEntity() instanceof SpellFigure figure) {
+            figure.confirmDamage(target);
+        }
     }
 }

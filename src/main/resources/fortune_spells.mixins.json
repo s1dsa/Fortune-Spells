@@ -42,6 +42,7 @@
     "client.StaffCameraMixin",
     "client.StaffFreeLookMixin",
     "client.StaffProjectionMixin",
+    "client.StaffOrbitCullingMixin",
     "client.StaffScrollJeiCatalogMixin",
     "client.StaffScrollJeiImbueMixin",
     "client.StaffScrollJeiInfoMixin",

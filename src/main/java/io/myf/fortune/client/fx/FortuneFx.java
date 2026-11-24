@@ -3,6 +3,7 @@ package io.myf.fortune.client.fx;
 import io.myf.fortune.FortuneIds;
 import io.myf.fortune.FortuneIds.FxKind;
 import io.myf.fortune.client.movement.BoneWingRenderer;
+import io.myf.fortune.client.audience.StaffOrbitLayer;
 import io.myf.fortune.network.S2CFortuneFx;
 import io.myf.fortune.registry.FSEffects;
 import io.myf.fortune.registry.FSParticles;
@@ -56,6 +57,9 @@ public final class FortuneFx {
             return;
         }
         switch (msg.kind()) {
+            case FxKind.STAFF_ORBIT -> {
+                if (entity instanceof Player player) StaffOrbitLayer.sync(player, (int) msg.amount());
+            }
             case FxKind.FATE_STRIKE -> fateStrike(level, entity);
             case FxKind.ALL_IN_STRIKE -> allInStrike(level, entity);
             case FxKind.ALL_IN_PRIMED -> RINGS.add(new Ring(entity.getId()));

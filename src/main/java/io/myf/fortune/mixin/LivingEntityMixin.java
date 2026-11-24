@@ -3,6 +3,7 @@ package io.myf.fortune.mixin;
 import io.myf.fortune.combat.FortuneCombatHandler;
 import io.myf.fortune.expansion.offense.ExposedEffect;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,6 +16,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 abstract class LivingEntityMixin {
+    // forceAddEffect still checks immunity. Permit only the sword dance's mark.
+    @Redirect(method = "forceAddEffect", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/world/entity/LivingEntity;canBeAffected(Lnet/minecraft/world/effect/MobEffectInstance;)Z"))
+    private boolean fortuneSpells$allowExposed(LivingEntity entity, MobEffectInstance effect) {
+        return effect.getEffect() instanceof ExposedEffect || entity.canBeAffected(effect);
+    }
+
     // Both player and mob damage pass here after armor and enchantments, before absorption.
     @Inject(method = {"getDamageAfterMagicAbsorb", "m_6515_"}, at = @At("RETURN"), cancellable = true, remap = false)
     private void fortuneSpells$exposeWounds(DamageSource source, float amount, CallbackInfoReturnable<Float> result) {
