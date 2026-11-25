@@ -1,6 +1,6 @@
 # 迎战铁魔法联动（铁魔法扩展）
 
-本模组把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。**0.2.17** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[下载 0.2.17](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.17/fortune_spells-0.2.17.jar) · [发布说明](docs/发布说明.md) · [玩家入门](docs/curseforge/quickstart.md) · [中英项目介绍](docs/curseforge/project.md)
+本模组把铁魔法（Iron's Spells 'n Spellbooks）和迎战（Meet Your Fight）联动起来。当前候选版 **0.2.21-rc3** 适用于 Minecraft 1.20.1 / Forge 47.4.0。13 个法术分属本模组的四个学派，以及铁魔法的神圣、火焰学派。[rc3 更新日志](docs/curseforge/changelog-0.2.21-rc3.md) · [CurseForge 项目](https://www.curseforge.com/projects/1826171) · [发布说明](docs/发布说明.md) · [玩家入门](docs/curseforge/quickstart.md) · [中英项目介绍](docs/curseforge/project.md)
 
 超位墨水采用「星轨天球」瓶形。一道星轨斜穿球形玻璃瓶，瓶身中央点亮一颗四芒星。整瓶的流彩动画共 40 帧，约两秒循环一次。物品栏格子外缘有一圈 1 像素的金边，四角呈浅金色。[查看墨水动图](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.16/rainbow-ink.gif)
 
@@ -27,21 +27,24 @@
 
 ## 依赖与版本
 
-客户端和服务端都要装下面全部依赖，版本以这张表为准（DESIGN 第 1 节）。
+四组均使用候选包 `fortune_spells-0.2.21-rc3.jar`。客户端和专用服共用 Java 17、Minecraft 1.20.1、Forge 47.4.0，以及 Curios 5.14.1+1.20.1、GeckoLib 4.8.2（Forge 1.20.1）、Player Animator 1.0.2-rc1+1.20。
 
-| 依赖 | 版本 | 说明 |
-|---|---|---|
-| Minecraft | 1.20.1 | |
-| Forge | 47.4.0 或更高（1.20.1） | 铁魔法 3.16.x 要求 `[47.4.0,)` |
-| Java | 17 | 推荐 Temurin 17 |
-| Iron's Spells 'n Spellbooks（铁魔法） | 1.20.1-3.16.4 | 代码基于这个版本编写 |
-| Iron's Lib | 1.20.1-2.1.0 | 铁魔法 3.16.4 的前置，要求 `[1.20.1-2,1.20.1-3)` |
-| Meet Your Fight（迎战） | 1.20.1-1.6.2 | |
-| Curios | 5.14.1+1.20.1 | |
-| GeckoLib | 4.8.2（geckolib-forge-1.20.1） | |
-| Player Animator | 1.0.2-rc1+1.20 | 铁魔法运行时必需 |
+| 迎战（1.20.1） | 铁魔法（1.20.1） | 配套前置 | 本轮验证范围 |
+|---|---|---|---|
+| 1.6.0 | 3.15.5.1 | irons_patreon_lib 1.0.1 | 双端启动、进服，两项 Mixin 双端应用，三种材料分别酿出一级觐见卷轴 |
+| 1.6.0 | 3.16.4 | irons_lib 2.1.0 | 仅核对双端文件哈希，运行未验证 |
+| 1.6.2 | 3.15.5.1 | irons_patreon_lib 1.0.1 | 仅核对双端文件哈希，运行未验证 |
+| 1.6.2 | 3.16.4 | irons_lib 2.1.0 | 仅核对双端文件哈希，运行未验证 |
 
-本模组在 `mods.toml` 里声明的最低版本：`forge [47.4.0,)`、`minecraft [1.20.1,1.20.2)`、`irons_spellbooks [1.20.1-3.16.4,)`、`meetyourfight [1.5.0,)`、`curios [5.14.1,)`、`geckolib [4.8.2,)`。
+首组用 `mossy_tooth`、`fortunes_favor`、`violet_bloom` 分别完成酿造。`phantoplasm` 的成品、玩家怨灵与罗莎琳交互、投射物命中、卡牌渲染和客户端主动重载资源仍待验证。施放卷轴后未检出祭坛实体，原因未定，供奉与权杖产出也待验证。服务端重载时铁魔法的 `citadel_tomes` 战利品表报告未知类型 `minecraft:set_written_book_pages`，当次仍可进服和酿造。维护者后续实玩暂未发现问题。
+
+### 安装与替换
+
+1. 关闭游戏和专用服。选定表中一行，在服务端和每位玩家实际使用的实例中打开 `mods`。把要替换的旧 JAR 移到 `mods` 外备份。
+2. 两端各放一份 rc3、所选迎战、铁魔法、该行配套前置及三个共用前置。只切换迎战时替换迎战 JAR 即可。跨两版铁魔法切换时同时替换铁魔法和配套前置，每端只保留所选行的一套。
+3. 在两端实例目录分别执行 `Get-FileHash .\mods\fortune_spells-0.2.21-rc3.jar -Algorithm SHA256`，核对结果为 `9b76aeaaacdf116bde6baf58f6197e9bd9ef7a23b69b0d96d93a29cf25b630be`。先启动专用服，待控制台显示 Done，再启动客户端并进服。
+
+0.2.21-rc3 在 `mods.toml` 里声明的依赖范围为 `forge [47.4.0,)`、`minecraft [1.20.1,1.20.2)`、`irons_spellbooks [1.20.1-3.15.5.1,)`、`meetyourfight [1.5.0,)`、`curios [5.14.1,)`、`geckolib [4.8.2,)`。
 
 联机时，服务器和每个客户端使用同一版模组 JAR。
 
@@ -65,7 +68,7 @@ gradlew.bat build
 
 PowerShell 里要写成 `.\gradlew.bat build`。
 
-- 构建 0.2.17 的产物在 `build\libs\fortune_spells-0.2.17.jar`。
+- 构建 0.2.21-rc3 的产物在 `build\libs\fortune_spells-0.2.21-rc3.jar`。
 - 首次构建会下载依赖、反编译 Minecraft，需要几分钟，之后会快很多。
 - 依赖下载失败（尤其是 Modrinth 上的迎战）时，请在频道 #111 里报，后端会换成 cursemaven 坐标（DESIGN 第 12 节第 5 条）。
 
@@ -96,10 +99,9 @@ gradlew.bat runServer
 
 | jar | 版本 |
 |---|---|
-| 本模组 [fortune_spells-0.2.17.jar](https://github.com/s1dsa/Fortune-Spells/releases/download/v0.2.17/fortune_spells-0.2.17.jar) | 0.2.17，升级时替换旧版 JAR |
-| Iron's Spells 'n Spellbooks | 1.20.1-3.16.4 |
-| Iron's Lib | 1.20.1-2.1.0 |
-| Meet Your Fight | 1.20.1-1.6.2 |
+| 本模组 `fortune_spells-0.2.21-rc3.jar` | 升级时替换实例内的旧版联动模组 |
+| Iron's Spells 'n Spellbooks 与配套前置 | 按上方「依赖与版本」选择 3.15.5.1 或 3.16.4 的组合 |
+| Meet Your Fight | 1.20.1-1.6.0 或 1.20.1-1.6.2 |
 | Curios | 5.14.1+1.20.1 |
 | GeckoLib（Forge 1.20.1） | 4.8.2 |
 | Player Animator（Forge） | 1.0.2-rc1+1.20 |

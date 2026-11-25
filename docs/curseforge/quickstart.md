@@ -1,19 +1,22 @@
 # 迎战铁魔法联动（铁魔法扩展）入门
 
-## 安装 0.2.17
+## 安装 0.2.21-rc3
 
 1. 为 Minecraft Java 版 **1.20.1** 建立 Forge 实例，选择 **47.4.0** 或更高的 **47.x** 版本，并使用 **Java 17**。
 2. 安装本模组和下表中的六个模组。使用 CurseForge App 时，在安装后检查实例的模组列表。手动安装时，将对应的 1.20.1 Forge 版 JAR 放入实例的 `mods` 文件夹。
-3. 联机时，服务端和每位玩家都使用同一套版本。从旧版升级时，用 `fortune_spells-0.2.17.jar` 替换原来的 JAR。启动后，在 Forge 的模组列表里查找「迎战铁魔法联动（铁魔法扩展）」。
+3. 联机时，服务端和每位玩家都使用同一套版本。从旧版升级时，用 `fortune_spells-0.2.21-rc3.jar` 替换原来的 JAR。启动后，在 Forge 的模组列表里查找「迎战铁魔法联动（铁魔法扩展）」。
 
-| 模组 | 已验证版本 |
+| 模组 | 安装版本 |
 | --- | --- |
-| [Iron's Spells 'n Spellbooks（铁魔法）](https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks) | 1.20.1-3.16.4 |
-| [Meet Your Fight（迎战）](https://www.curseforge.com/minecraft/mc-mods/meet-your-fight) | 1.20.1-1.6.2 |
+| [Iron's Spells 'n Spellbooks（铁魔法）](https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks) | 3.15.5.1 或 3.16.4 |
+| [Meet Your Fight（迎战）](https://www.curseforge.com/minecraft/mc-mods/meet-your-fight) | 1.6.0 或 1.6.2 |
 | [Curios API](https://www.curseforge.com/minecraft/mc-mods/curios) | 5.14.1+1.20.1 |
 | [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) | 4.8.2 |
-| [Iron's Lib](https://www.curseforge.com/minecraft/mc-mods/irons-lib) | 1.20.1-2.1.0 |
+| [Iron's Lib](https://www.curseforge.com/minecraft/mc-mods/irons-lib) | 铁魔法 3.16.4 使用 2.1.0 |
+| Iron's Patreon Lib | 铁魔法 3.15.5.1 使用 1.0.1 |
 | [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) | 1.0.2-rc1+1.20 |
+
+两种铁魔法前置按版本二选一。[查看四组搭配及测试范围](../../README.md#依赖与版本)
 
 ## 先试一张「命运之选」
 
