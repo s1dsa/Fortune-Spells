@@ -11,7 +11,6 @@ import io.redspace.ironsspellbooks.fluids.SimpleTintedClientFluidType;
 import io.redspace.ironsspellbooks.item.InkItem;
 import io.redspace.ironsspellbooks.registries.CreativeTabRegistry;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -20,8 +19,6 @@ import net.minecraft.world.item.CreativeModeTab.TabVisibility;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -32,11 +29,11 @@ import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 import static io.redspace.ironsspellbooks.api.spells.SpellRarity.*;
 
@@ -53,14 +50,24 @@ public final class ExpansionCrafting {
         }
     });
     private static final RegistryObject<Fluid> INK_FLUID = FLUIDS.register(INK_ID, ExpansionCrafting::createFluid);
-    public static final RegistryObject<Item> INK = ITEMS.register(INK_ID, () -> new InkItem(SpellRarity.LEGENDARY, INK_FLUID, new Item.Properties()) {
-        @Override
-        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> lines, TooltipFlag flags) {
-            lines.add(Component.translatable("tooltip.irons_spellbooks.ink_tooltip", tierName()).withStyle(ChatFormatting.GRAY));
-        }
-    });
+    public static final RegistryObject<Item> INK = ITEMS.register(INK_ID, ExpansionCrafting::createInk);
 
     private ExpansionCrafting() {}
+
+    private static InkItem createInk() {
+        // Iron's 3.15 supplies its own item properties. 3.16 takes them from the caller.
+        try {
+            try {
+                return InkItem.class.getConstructor(SpellRarity.class, Supplier.class, Item.Properties.class)
+                        .newInstance(LEGENDARY, INK_FLUID, new Item.Properties());
+            } catch (NoSuchMethodException olderVersion) {
+                return InkItem.class.getConstructor(SpellRarity.class, Supplier.class)
+                        .newInstance(LEGENDARY, INK_FLUID);
+            }
+        } catch (ReflectiveOperationException e) {
+            throw new IllegalStateException("Could not create transcendent ink with the installed Iron's Spellbooks", e);
+        }
+    }
 
     private static Fluid createFluid() {
         return new NoopFluid(new ForgeFlowingFluid.Properties(INK_TYPE, INK_FLUID, INK_FLUID).bucket(() -> Items.AIR));

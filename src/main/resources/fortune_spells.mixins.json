@@ -24,6 +24,7 @@
     "MovementPacketMixin",
     "BossScrollForgeMixin",
     "TranscendentAnvilMixin",
+    "TranscendentInkTooltipMixin",
     "BossProjectileAccessor",
     "LivingEntityMixin",
     "TotemAccess",
